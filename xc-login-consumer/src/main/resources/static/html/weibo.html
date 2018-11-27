@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script src="../js/jquery-1.8.3.js"></script>
+    <script >
+        //获得本页面url中信息，为了获得code
+        var query = window.location.search.substring(1);
+
+        $(function () {
+            $.getJSON("/wwbb",function (result) {
+                alert(result);
+            })
+
+
+
+                $.getJSON("/wbweibo",query,function (result) {
+                    $("#f").html(result).css({"color": "red"});
+
+                    
+                })
+
+
+
+
+
+
+        })
+
+
+    </script>
+</head>
+<body>
+    <!--<ul><li></li><img src="" alt="">登录成功！</ul>-->
+
+        <p id="f"></p>
+        <a href="/weibologout">退出</a>
+
+
+</body>
+</html>

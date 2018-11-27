@@ -1,0 +1,710 @@
+﻿<!DOCTYPE html>
+<html data-php='{"img_test_type":"index_html_50","img_test_page":"index"}'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta name="baidu-site-verification" content="t7oDT96Amk" />
+<title>唯品会手机购物正品商城：一家专门做特卖的网站手机版</title>
+<meta content="唯品会手机购物，正品商城，品牌特卖会" name="keywords">
+<meta content="唯品会手机购物网以1-7折超低折扣对全球各大品牌进行限时特卖，商城内正品囊括服装、化妆品、家居、奢侈品等。100%正品、手机购物下单、货到付款、7天无条件退货。" name="description">
+<meta name="sogou_site_verification" content="G7nmLR75yc"/>
+<meta name="baidu-tc-cerfication" content="0a8c6d28b570b218f78510c29be4529b" />
+<meta name="360-site-verification" content="8b6121969d78afda8caeb69053fa29d9" />
+<script>
+(function wapStart() {
+    var now = Date.now();
+    var win = this;
+    var phpData = document.documentElement.getAttribute('data-php');
+    var special = /m=special/.test(location.search);
+    var _onCompleted = function() {__STATS.add('dom_ready');};
+    var _onLoad = function() {
+        __STATS.add('onload');
+        if(!special && __locals.img_test_page == 'index' && Math.random() <= 0.1) {
+            var id = __locals.img_test_type;
+            var v = Date.now() - now;
+            if(id) (new Image()).src = 'http://mstats.vip.com/v1/counts/m_img_test?id='+id+'&value='+v;
+        }
+        win.removeEventListener('DOMContentLoaded', _onCompleted);
+        win.removeEventListener('load', _onLoad);
+    };
+
+    if (phpData) {
+        try {
+            phpData = JSON.parse(phpData);
+        } catch (e) {}
+    }
+
+    win.__STATS = {
+        start: now,
+        points: {},
+        add: function(point, time) {
+            __STATS.points[point] = time ? time : (Date.now() - __STATS.start);
+        }
+    };
+    win.addEventListener('DOMContentLoaded', _onCompleted, false);
+    win.addEventListener('load', _onLoad, false);
+    win.onerror = function(msg, url, line, col) {
+        var u = 'http://mstats.vip.com/v1/jslog/m?';
+        u += '_t=' + Date.now();
+        u += '&msg=' + encodeURIComponent([msg, url, line, col || 0].join('|'));
+        (new Image()).src = u;
+    };
+
+    // need remove
+    win.ui = 'touch';
+    win.vipConfig = {
+        priceImageSwitch: parseInt('0', 10),
+        ipLocation: {
+            result: "1",
+            province: "上海"
+        }
+    };
+
+    // all data from php stored here
+    win.__locals = phpData || {};
+}.call(window));
+</script>
+
+
+<link rel="stylesheet" href="//ms2-m.vipstatic.com/css/45cd6da9da.layout.min.css">
+
+<link rel="stylesheet" href="//ms2-m.vipstatic.com/css/86fe49ca90.common.min.css">
+
+
+<script>__STATS.add('head_load');</script>
+
+
+<noscript><div class="ui-top-note">您的浏览器已禁用javascript,为了您能正常浏览网站,请在浏览器里面启用javascript!</div></noscript>
+
+</head>
+
+<body class="u-index" >
+
+<script src="//ms2-m.vipstatic.com/js/lib/562a4c0e89.jquery-2.1.0.min.js"></script>
+
+
+
+<!--客户端下载的图片-->
+ <!--客户端下载的图片-->
+<style>
+	.qipdXxzo { width: 100%; height: 55px; background: url(//ms2-m.vipstatic.com/images/common/63f7093727.download_bg.png) ; background-size: 100% 100%;}
+	.qipdXxzo .u-download-bar{width: 100%; height: 55px; position: relative; background: url(//ms2-m.vipstatic.com/images/common/b658bbd2b9.client_fix_btn.png) no-repeat center top; background-size:320px; z-index: 100;}
+	.qipdXxzo p {position: absolute; top: 15px; left: 50%; margin-left:-70px; width: 120px;line-height: 16px; text-align: left; color: #fff; font-size: 12px; font-style: italic;}
+	.qipdXxzo span {width: 18px; height: 18px; padding:10px 20px 10px 7px; position: absolute; background:url(//ms2-m.vipstatic.com/images/common/d094a29202.indexicon.png) no-repeat; background-size:225px; background-position: -168px -143px;/*background-position: -53px -150px;*/ top: 10px; left: 0;}
+</style>
+
+<div class="qipdXxzo">
+	<div class="u-download-bar">
+		<p>下载手机APP<br/>抢购何止快人一步！</p>
+		<span></span>
+	</div>
+</div>
+
+<script>
+	var downloadAppConfig = {
+		cls : 'qipdXxzo',
+		url : 'http://m.vip.com/service-download.html',
+		page : 'index'
+	}
+</script>
+
+
+    <!-- 首页、频道、活动、文章头部-->
+  <header id="header" class="u-header clearfix">
+      <div class="u-hd-logo f-left"><a href="index.html" class="u-icon i-logo" mars_sead="nav_home_btn"></a></div>
+    <div class="u-hd-location J_nav_warehouse hide"><a href="javascript:;" rel="area" data-depot="true" mars_sead="home_topnav_rovince_btn"><span class="warehouse_txt"></span><span class="u-icon i-arrow-down" data-changeStyle="i_down_arrow"></span></a></div>
+
+  <!-- 老版首页header右边入口 -->
+    <div class="u-hd-right f-right">
+    	<a href="cart.html" mars_sead="home_head_cart_btn" onclick="setBackAct('topHeaderCart')">
+    		<span class="u-icon i-hd-cart"></span>
+  		  	</a>
+    </div>
+    <div class="u-hd-right f-right">
+    	<a href="user.html" mars_sead="index-user-service_btn" onclick="setBackAct('topHeaderUserHome');" id="reddot">
+    		<span class="u-icon i-hd-logn">
+    			    		</span>
+    		<!--<em>1</em>-->
+    	</a>
+    </div>
+        	<div class="u-hd-right f-right">
+    		  		     <a href="classify.html" mars_sead="brand-search_btn"><span class="u-icon i-hd-search"></span></a>
+  		    	</div>
+      <!-- END 老版首页header右边入口 -->
+  </header>
+  
+
+<!--以下是选项卡切换不同频道-->
+<div style="">
+<div class="nav_placeholder" style="display:none"></div>
+<div id="nav" class="u-nav">
+  <ul class="clearfix">
+    					 				 	<li class="num05">
+				 		<a href="index.html" class="nav_current"  mars_sead="floating-index_btn" >
+				 			<span>首页</span>
+				 		</a>
+				 		
+				 	</li>
+				 				 	<li class="num05">
+				 		<a href="clothes.html"   mars_sead="floating-index-cloth_btn" >
+				 			<span>服饰</span>
+				 		</a>
+				 		
+				 	</li>
+				 				 	<li class="num05">
+				 		<a href="child.html"   mars_sead="floating-index-child_btn" >
+				 			<span>亲子</span>
+				 		</a>
+				 		
+				 	</li>
+				 				 	<li class="num05">
+				 		<a href="life.html"   mars_sead="floating-index-home_btn" >
+				 			<span>居家</span>
+				 		</a>
+				 		
+				 	</li>
+				 				 	<li class="num05">
+				 		<a href="newbeauty.html"   mars_sead="floating-index-beauty_btn" >
+				 			<span>美妆</span>
+				 		</a>
+				 		
+				 	</li>
+				 		  </ul>
+    </div>
+</div><div class="u-adbanner J_operation_slider" data-zoneid="75" data-f="">  <div class="u-adbanner-cont J_content" class="img-loading img-bg">    <ul>            <li class="J_content_item">        <a class="J_content_link" mars_sead="index-ads_btn" href="javascript:void(0)" data-href="http://ap.vip.com/h5_certified" data-showtime="4000" >          <img class="J_content_img" src="http://b.vimage1.com/2015/01/15/7291/142132919865.jpg" class="BarLoad" >        </a>      </li>            <li class="J_content_item">        <a class="J_content_link" mars_sead="index-ads_btn" href="javascript:void(0)" data-href="index.php?m=special&p=/te/permanent/s16917_all_index.php&h=mzt.vip.com&wapid=mzt_16917" data-showtime="4000" >          <img class="J_content_img" src="http://b.vimage1.com/2015/03/29/8675/720226.jpg" class="BarLoad" style="display:none">        </a>      </li>            <li class="J_content_item">        <a class="J_content_link" mars_sead="index-ads_btn" href="javascript:void(0)" data-href="index.php?m=special&p=/te/permanent/s15040_sh_index.php&h=mzt.vip.com&wapid=mzt_15040" data-showtime="4000" >          <img class="J_content_img" src="http://b.vimage1.com/2015/03/30/236/720-226.jpg" class="BarLoad" style="display:none">        </a>      </li>            <li class="J_content_item">        <a class="J_content_link" mars_sead="index-ads_btn" href="javascript:void(0)" data-href="index.php?m=special&p=/te/permanent/s17277_sh_index.php&h=mzt.vip.com&wapid=mzt_17277" data-showtime="4000" >          <img class="J_content_img" src="http://b.vimage1.com/2015/03/28/9755/720226.jpg" class="BarLoad" style="display:none">        </a>      </li>            <li class="J_content_item">        <a class="J_content_link" mars_sead="index-ads_btn" href="javascript:void(0)" data-href="brand-388798-0-0-0-1-0-1-20.html" data-showtime="4000" >          <img class="J_content_img" src="http://b.vimage1.com/2015/03/27/2089/720_2261.jpg" class="BarLoad" style="display:none">        </a>      </li>          </ul>  </div>    <div class="u-imgcount J_btn">        <em class="J_btn_item" ></em>        <em class="J_btn_item" ></em>        <em class="J_btn_item" ></em>        <em class="J_btn_item" ></em>        <em class="J_btn_item" ></em>      </div>  </div><!--运营位-->
+<div class="operate">
+  <div class="col_in_row clearfix J_process_tip_item">
+  	  		 <div class="row">
+  		 		  		 			<div class="col50">
+  		 				<a href="http://m.vip.com/index.php?m=special&p=/te/permanent/s16917_all_index.php&f=xkyyw" mars_sead="">
+  		 					<img src="http://b.vimage1.com/2015/03/27/566/1427455045422.jpg">
+  		 				</a>
+  		 			</div>	
+  		 		  		 			<div class="col50">
+  		 				<a href="http://m.vip.com/beauty.html" mars_sead="">
+  		 					<img src="http://b.vimage1.com/2014/12/17/972/1418811896302.png">
+  		 				</a>
+  		 			</div>	
+  		 				 </div>
+  	  </div>
+</div>
+<div class="u-module">
+<!--快捷图标-->
+<!--今日上线-->
+<div class="u-brand-list">
+<div class="u-module-tit">今日特卖 · 每天早10点 晚8点上新</div>
+<div id="channel_img" data-tcount="218" data-ycount="132" data-lcount="411" data-offset="10" data-total="761" data-limit="10" data-channel="1" data-menuid="64" data-typeid="0" data-tsift="0" data-page="index.html" data-img-class="pro" data-float-progress="0">
+    	  		  <div class="u-brand"><!--品牌1-->
+		    <div class="p-relative">
+		       <a href="index.php?m=special&p=/te/permanent/s17291_sh_index.php&h=mzt.vip.com&wapid=mzt_17291" class="u-brand-pic J_item-list">
+		       		<img src="http://b.vimage1.com/2015/03/30/632/msp/s/3_604x290_50.jpg" data-onerror="" data-brandid="19007" class="pro">
+		       </a>
+		              
+		      		    </div>
+		    <div class="u-brand-msg e-border-b clearfix">
+		      <p class="u-brand-name f-left">防晒大作战</p>
+		      <div class="u-brand-time f-right">剩2天</div>
+		    </div>
+		  </div>
+  	    	  		  <div class="u-brand"><!--品牌1-->
+		    <div class="p-relative">
+		       <a href="index.php?m=special&p=/te/permanent/s17106_all_index.php&h=mzt.vip.com&wapid=mzt_17106" class="u-brand-pic J_item-list">
+		       		<img src="http://b.vimage1.com/2015/03/27/1189/msp/s/1_604x290_50.jpg" data-onerror="" data-brandid="18822" class="pro">
+		       </a>
+		              
+		      		    </div>
+		    <div class="u-brand-msg e-border-b clearfix">
+		      <p class="u-brand-name f-left">奢品眼镜移动端专场</p>
+		      <div class="u-brand-time f-right">剩2天</div>
+		    </div>
+		  </div>
+  	    	  		  <div class="u-brand"><!--品牌1-->
+		    <div class="p-relative">
+		       <a href="brand-388748-0-0-0-1-0-1-20.html" class="u-brand-pic J_item-list">
+		       		<img src="http://a.vimage1.com/upload/brand/201503/20150327181255286412_604x290_50.jpg" data-onerror="" data-brandid="388748" class="pro">
+		       </a>
+		        		      <div class="u-brand-pms">购物即享9折优惠</div> 
+		            
+		      		      <div class="u-brand-mark"><img src="http://b.vimage1.com/update/zhuanti/show/vipshow1404972150494.png" width="88"></div>
+		      		    </div>
+		    <div class="u-brand-msg e-border-b clearfix">
+		      <p class="u-brand-name f-left"><span class="u-brand-discount"><span class="salebg2" >一口价</span></span>红豆HOdo专柜同步新品男装专场</p>
+		      <div class="u-brand-time f-right">剩1天</div>
+		    </div>
+		  </div>
+  	    	  		  <div class="u-brand"><!--品牌1-->
+		    <div class="p-relative">
+		       <a href="index.php?m=special&p=/te/permanent/s16917_all_index.php&h=mzt.vip.com&wapid=mzt_16917" class="u-brand-pic J_item-list">
+		       		<img src="http://b.vimage1.com/2015/03/30/1307/msp/s/1_2_604x290_50.jpg" data-onerror="" data-brandid="18633" class="pro">
+		       </a>
+		              
+		      		    </div>
+		    <div class="u-brand-msg e-border-b clearfix">
+		      <p class="u-brand-name f-left">新人专享-御泥坊移动端专场</p>
+		      <div class="u-brand-time f-right">剩3天</div>
+		    </div>
+		  </div>
+  	    	  		  <div class="u-brand"><!--品牌1-->
+		    <div class="p-relative">
+		       <a href="index.php?m=special&p=/te/permanent/s10856_sh_index.php&h=mzt.vip.com&wapid=mzt_10856" class="u-brand-pic J_item-list">
+		       		<img src="http://b.vimage1.com/2015/03/30/511/msp/s/1_604x290_50.jpg" data-onerror="" data-brandid="12569" class="pro">
+		       </a>
+		              
+		      		    </div>
+		    <div class="u-brand-msg e-border-b clearfix">
+		      <p class="u-brand-name f-left">新人特享-雷瓦卷发器</p>
+		      <div class="u-brand-time f-right">剩12时</div>
+		    </div>
+		  </div>
+  	    	  		  <div class="u-brand"><!--品牌1-->
+		    <div class="p-relative">
+		       <a href="index.php?m=special&p=/te/permanent/s13929_sh_index.php&h=mzt.vip.com&wapid=mzt_13929" class="u-brand-pic J_item-list">
+		       		<img src="http://b.vimage1.com/2015/03/30/1031/msp/s/1_604x290_50.jpg" data-onerror="" data-brandid="15643" class="pro">
+		       </a>
+		              
+		      		    </div>
+		    <div class="u-brand-msg e-border-b clearfix">
+		      <p class="u-brand-name f-left">新人特享-今日最优惠品牌</p>
+		      <div class="u-brand-time f-right">剩12时</div>
+		    </div>
+		  </div>
+  	    	  		  <div class="u-brand"><!--品牌1-->
+		    <div class="p-relative">
+		       <a href="brand-387897-0-0-0-1-0-1-20.html" class="u-brand-pic J_item-list">
+		       		<img src="http://a.vimage1.com/upload/brand/201503/20150327162143512612_604x290_50.jpg" data-onerror="" data-brandid="387897" class="pro">
+		       </a>
+		              
+		      		      <div class="u-brand-mark"><img src="http://b.vimage1.com/update/zhuanti/show/vipshow1404972150494.png" width="88"></div>
+		      		    </div>
+		    <div class="u-brand-msg e-border-b clearfix">
+		      <p class="u-brand-name f-left"><span class="u-brand-discount"><span class="salebg2" >0.9</span>折起</span>沙驰satchi男鞋移动端专场</p>
+		      <div class="u-brand-time f-right">剩2天</div>
+		    </div>
+		  </div>
+  	    	  		  <div class="u-brand"><!--品牌1-->
+		    <div class="p-relative">
+		       <a href="index.php?m=special&p=/te/permanent/s14147_sh_index.php&h=mzt.vip.com&wapid=mzt_14147" class="u-brand-pic J_item-list">
+		       		<img src="http://b.vimage1.com/2015/03/30/607/msp/s/1_604x290_50.jpg" data-onerror="" data-brandid="15861" class="pro">
+		       </a>
+		              
+		      		    </div>
+		    <div class="u-brand-msg e-border-b clearfix">
+		      <p class="u-brand-name f-left">新人特享-飞科土豪金三头剃须刀</p>
+		      <div class="u-brand-time f-right">剩12时</div>
+		    </div>
+		  </div>
+  	    	  		  <div class="u-brand"><!--品牌1-->
+		    <div class="p-relative">
+		       <a href="index.php?m=special&p=/te/permanent/s17284_sh_index.php&h=mzt.vip.com&wapid=mzt_17284" class="u-brand-pic J_item-list">
+		       		<img src="http://b.vimage1.com/2015/03/28/1965/msp/s/1_604x290_50.jpg" data-onerror="" data-brandid="19000" class="pro">
+		       </a>
+		              
+		      		    </div>
+		    <div class="u-brand-msg e-border-b clearfix">
+		      <p class="u-brand-name f-left">猎美游戏</p>
+		      <div class="u-brand-time f-right">剩5天</div>
+		    </div>
+		  </div>
+  	    	  		  <div class="u-brand"><!--品牌1-->
+		    <div class="p-relative">
+		       <a href="index.php?m=special&p=/te/permanent/s15566_sh_index.php&h=mzt.vip.com&wapid=mzt_15566" class="u-brand-pic J_item-list">
+		       		<img src="http://b.vimage1.com/2015/03/30/899/msp/s/1_604x290_50.jpg" data-onerror="" data-brandid="17281" class="pro">
+		       </a>
+		              
+		      		    </div>
+		    <div class="u-brand-msg e-border-b clearfix">
+		      <p class="u-brand-name f-left">新人特享—奔腾女士剃毛器</p>
+		      <div class="u-brand-time f-right">剩1天</div>
+		    </div>
+		  </div>
+  	  </div>
+</div>
+
+  <div class="J_pager_more"><div class="u-more-btn u-loading J_loadMore">上拉查看更多在售品牌</div></div>
+</div>
+
+ <div class="u-module u-footer-bar">
+  <ul class="u-order-list clearfix">
+    <li><a href="brand-date.html" mars_sead="index-coming_btn"><span class="u-icon i-soon"></span><p>即将上线</p></a></li>
+    <li><a href="http://t.vip.com" mars_sead="tuan_btn"><span class="u-icon i-tuan"></span><p>唯品团购</p></a></li>
+    <li><a href="service-insurance.html" mars_sead="service-insurance_btn"><span class="u-icon i-quality"></span><p>正品保证</p></a></li>
+    <li><a href="vipservice.html" mars_sead="custommer_seevice_btn"><span class="u-icon i-sev"></span><p>唯品客服</p></a></li>
+  </ul>
+ </div>
+<script type="text/javascript">
+  var pageName = 'index';
+  var userType = 'A1';
+  function advertiseData(){
+    return {
+      indexPopId: parseInt('2'),// 0:居中 1:底部 2:底部+动画
+      indexPopAdId: '168',
+      img: 'http://b.vimage1.com/2015/03/30/5587/640_230.png',
+      url: 'index.php?m=special&p=/te/permanent/s16917_all_index.php&h=mzt.vip.com&wapid=mzt_16917',
+      target: parseInt('0'),
+      open_ad: parseInt('1')
+    }
+  };
+</script>
+  <div class="u-footer clearfix">
+        <div class="u-footnav clearfix">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<a href="index.html" mars_sead="footer-index_btn">首页</a>
+<a href="cart.html" mars_sead="footer-cart_btn">购物车</a>
+<a href="service-download.html" mars_sead="footer-loading_btn">客户端</a>
+<a href="https://mlogin.vip.com/user-login.html?back_act=http%3A%2F%2Fm.vip.com%2F" mars_sead="footer-mlogin_btn">登录</a>
+<a href="https://mlogin.vip.com/user-register.html?back_act=http%3A%2F%2Fm.vip.com%2F" mars_sead="footer-mregister_btn">注册</a>
+
+    </div>
+    <p class="u-copyright" >Copyright © 2008-2015 m.vip.com，All Rights Reserved 粤ICP备08114786号</p>
+  </div>
+      <a href="#top" class="u-backtop" mars_sead="home_foot_top_btn"><span class="u-icon i-backtop"></span></a>
+    <!--以下是浮于显示屏左下角的购物袋-->
+      <div class="u-shopbag" data-shopcart="true" >
+  <a href="cart.html?rbc=service"  mars_sead="floating-cart_btn">
+    <span class="u-icon i-flow-carticon"></span>
+        <span class="u-flow-cartnum hide"></span>
+    <span class="u-flow-carttime hide"></span>
+      </a>
+</div>
+  
+<div class="modal hide" id="w-modal" data-modal="depot">
+  <div class="modal-header">
+    <h3 class="tit"><span class="hj"></span>选择收货地址，火速配送哦</h3>
+  </div>
+  <div class="modal-body">
+    <div class="modal-message">
+      <div class="ui-xx clearfix" data-merPos="true" data-hascart="0">
+                <h4>我们猜您在</h4>
+        <ul class="ui-list-li">
+          <li><a href="javascript:;" class="addr_guess J_guess_warehouse" data-dismiss="modal" data-Positions="VIP_SH" mars_sead="local-dress_btn" data_mars="103101">上海<span class="icon_addr"></span></a></li>
+        </ul>
+        
+        		      		      <h4>华北地区</h4>
+          <ul class="ui-list-li">
+        	  			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_BJ"  mars_sead="warehous_province_btn" data_mars="101101">北京</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_BJ"  mars_sead="warehous_province_btn" data_mars="101102">天津</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_BJ"  mars_sead="warehous_province_btn" data_mars="101103">河北</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_BJ"  mars_sead="warehous_province_btn" data_mars="101104">山西</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_BJ"  mars_sead="warehous_province_btn" data_mars="101105">内蒙古</a>
+            </li>
+			                </ul>
+		      		      <h4>华南地区</h4>
+          <ul class="ui-list-li">
+        	  			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_NH"  mars_sead="warehous_province_btn" data_mars="104104">广东</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_NH"  mars_sead="warehous_province_btn" data_mars="104105">广西</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_HZ"  mars_sead="warehous_province_btn" data_mars="104101">河南</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_HZ"  mars_sead="warehous_province_btn" data_mars="104102">湖北</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_NH"  mars_sead="warehous_province_btn" data_mars="104103">湖南</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_NH"  mars_sead="warehous_province_btn" data_mars="104106">海南</a>
+            </li>
+			                </ul>
+		      		      <h4>华东地区</h4>
+          <ul class="ui-list-li">
+        	  			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_SH"  mars_sead="warehous_province_btn" data_mars="103101">上海</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_SH"  mars_sead="warehous_province_btn" data_mars="103102">江苏</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_SH"  mars_sead="warehous_province_btn" data_mars="103103">浙江</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_SH"  mars_sead="warehous_province_btn" data_mars="103104">安徽</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_NH"  mars_sead="warehous_province_btn" data_mars="103105">福建</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_SH"  mars_sead="warehous_province_btn" data_mars="103106">江西</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_SH"  mars_sead="warehous_province_btn" data_mars="103107">山东</a>
+            </li>
+			                </ul>
+		      		      <h4>西南地区</h4>
+          <ul class="ui-list-li">
+        	  			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_CD"  mars_sead="warehous_province_btn" data_mars="105100">重庆</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_CD"  mars_sead="warehous_province_btn" data_mars="105101">四川</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_CD"  mars_sead="warehous_province_btn" data_mars="105102">贵州</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_NH"  mars_sead="warehous_province_btn" data_mars="105103">云南</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_CD"  mars_sead="warehous_province_btn" data_mars="105104">西藏</a>
+            </li>
+			                </ul>
+		      		      <h4>东北地区</h4>
+          <ul class="ui-list-li">
+        	  			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_BJ"  mars_sead="warehous_province_btn" data_mars="102101">辽宁</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_BJ"  mars_sead="warehous_province_btn" data_mars="102102">吉林</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_BJ"  mars_sead="warehous_province_btn" data_mars="102103">黑龙江</a>
+            </li>
+			                </ul>
+		      		      <h4>西北地区</h4>
+          <ul class="ui-list-li">
+        	  			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_CD"  mars_sead="warehous_province_btn" data_mars="106101">陕西</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_CD"  mars_sead="warehous_province_btn" data_mars="106102">甘肃</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_CD"  mars_sead="warehous_province_btn" data_mars="106103">青海</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_CD"  mars_sead="warehous_province_btn" data_mars="106104">宁夏</a>
+            </li>
+			      			      <li>
+              <a href="javascript:;" data-dismiss="modal" data-Positions="VIP_CD"  mars_sead="warehous_province_btn" data_mars="106105">新疆</a>
+            </li>
+			                </ul>
+		      		          </div>
+    </div>
+  </div>
+  <div class="modal-header">
+    <h3 class="tit"><span class="hj"></span>选择最近收货地址，送货更快哦</h3>
+  </div>
+</div>
+<div class="c-bottom" style="display:none"></div>
+
+
+
+<script src="//ms2-m.vipstatic.com/js/e41a4b7a8b.all.min.js"></script>
+
+    <!-- 分仓：LBS弹窗 -->
+    <script>
+	(function() {
+		var curWarehouse = decodeURI(Cookie.Get('warehouse')),
+			lbsData;
+
+	    function init() {
+	        var opts = {
+	        	timeout : 3000,
+	        	enableHighAccuracy : true
+	        }
+
+	        if (!navigator.geolocation) {
+	        	errHandler();
+	            return;
+	        }
+
+	        // 请求地理位置成功
+	        function success(position) {
+	            var latitude = position.coords.latitude;
+	            var longitude = position.coords.longitude;
+
+	            successHandler('agree-warehouse_btn');
+	            successHandler('latlng-req-success_btn');
+
+	        	// 请求百度，经纬度换省份
+	        	$.ajax({
+	        		url : 'http://api.map.baidu.com/geocoder/v2/',
+
+	        		data : {
+	        			ak : 'GsWdp2jUz1tvC6bV0sClDfDX',
+	        			output : 'json',
+	        			pois : '1',
+	        			location : latitude + ',' + longitude
+	        		},
+
+	        		dataType : 'jsonp',
+
+	        		success : function(data){
+	        			successHandler('baidu-req-success_btn');
+
+	        			$(function(){
+	        				var result, province, provinceList, warehouseElem;
+
+			            	if(data.status == 0){
+			            		// 百度返回的省份，返回的"广东省"，本地是"广东"，需要把最后的“省”及“市”去掉，如此类推
+			            		province = data.result.addressComponent.province.slice(0, -1);
+
+			            		warehouseElem = getWarehouseElem(province);
+
+			            		// 省份匹配成功
+			            		if(warehouseElem){
+			            			changeWarehouse(warehouseElem);
+			    					VIP.localStorage.setItem('changing_warehouse_type', 1)
+			    				// 省份匹配失败
+			            		} else {
+			            			ipLocation();
+			            			Mar.Seed.request("button", "click", 'baidu-req-faile_btn');
+			            		}
+			            		
+			            		
+			            	}else{
+			            		ipLocation();
+			            		Mar.Seed.request("button", "click", 'baidu-req-faile_btn');
+			            	}
+		            	})
+	        		}, 
+
+	        		error : function(err){
+	        			ipLocation();
+			            Mar.Seed.request("button", "click", 'baidu-req-faile_btn');
+	        		}
+	        	})
+	        };
+
+	        // 请求地理位置失败
+	        function error (err){
+	        	var code = err.code, mar, data;
+	        	// 1：用户拒绝，2：无法获取，3：超时
+	        	switch(code){
+	        		case 1 :
+	        			Mar.Seed.request("button", "click", 'refuse-warehouse_btn');
+	        			Mar.Seed.request("button", "click", 'latlng-req-faile_btn', 'user');
+	        			ipLocation();
+	        			break;
+	        		case 2 :
+	        			Mar.Seed.request("button", "click", 'agree-warehouse_btn');
+	        			Mar.Seed.request("button", "click", 'latlng-req-faile_btn', 'unknow');
+	        			ipLocation();
+	        			break;
+	        		case 3 :
+	        			Mar.Seed.request("button", "click", 'agree-warehouse_btn');
+	        			Mar.Seed.request("button", "click", 'latlng-req-faile_btn', 'timeout');
+	        			ipLocation();
+	        			break;
+	        	} 
+	        }
+
+	       	// 通过省份名，获取分仓弹窗对应元素
+	       	function getWarehouseElem(province){
+	       		var list, matchElem;
+
+        		// 获取分仓弹窗里的省份列表
+        		list = $('.ui-list-li li');
+        		list.each(function(k, v){
+        			var link = $('a', v);
+        			if(province == $.trim(link.html())){
+        				matchElem = link;
+        				return false;
+        			}
+        		})
+
+        		return matchElem;
+	       	}
+
+
+	        function ipLocation(){
+	        	var ipLocation = vipConfig.ipLocation, warehouseElem;
+
+	        	warehouseElem = getWarehouseElem(ipLocation.province);
+
+	        	if(ipLocation.result == 1 && warehouseElem){
+        			changeWarehouse(warehouseElem);
+	        	} else {
+	        		manualWarehouse();
+	        	}
+	        }
+
+	        // 通过分仓元素，切换分仓
+	        function changeWarehouse(warehouseElem){
+	        	hawk.depot.set({
+					dom: {
+						elem : warehouseElem,
+    					posi : warehouseElem.data('positions'),
+    					area : encodeURI(warehouseElem.text())
+					}
+				});
+	        }
+
+	        function successHandler(mar){
+	            Mar.Seed.request("button", "click", mar);
+	        }
+
+	        function errHandler(mar){
+	        	Mar.Seed.request("button", "click", mar);
+	        	manualWarehouse();
+	        }
+
+	        // 手动分仓弹窗
+	        function manualWarehouse(){
+		        hawk.depot.show('#w-modal', {modalHide : true});
+	        }
+
+	        Mar.Seed.request("button", "click", 'lbs-location_btn');
+	        navigator.geolocation.getCurrentPosition(success, error, opts);
+	        
+	    }
+
+	    $(function(){
+	    	if(Cookie.Get('WAP[p_wh]')){
+		    	$('.J_nav_warehouse').show().find('.warehouse_txt').html(decodeURI(Cookie.Get('WAP[p_area]')));
+		    }else{
+		    	init();
+		    }
+	    })
+	    
+
+	})()
+</script>
+
+<script src="http://3rd.vipstatic.com/mars_wap/mars_wap.js"></script>
+<noscript>
+    <img src="http://mar.vip.com/n" height="1" width="1" border="0" alt="" />
+</noscript>
+
+<script async src="//ms2-m.vipstatic.com/js/f90fe14b29.report.min.js"></script>
+
+
+<script src="//ms2-m.vipstatic.com/js/7fae035d74.swipe.min.js"></script>
+<script src="//ms2-m.vipstatic.com/js/touch/040633d56f.page.page.index.min.js"></script>
+
+<!-- ZYZ Code Start -->
+    <script type="text/javascript">
+        var _zyzs = document.getElementsByTagName('script')[0];
+        var _zaq  = _zaq || [];
+        _zaq.push(['setTrackerUrl', 'http://tk.optaim.com/j']);
+        _zaq.push(['setSiteId', 'zyz_283_1']);
+        _zaq.push(['trackPageView']);
+
+        /*var _s   = document.createElement('script');
+        _s.src   = "http://s2.vipstatic.com/js/public/inf/ztk.js";
+        _s.type  = 'text/javascript';
+        _s.async = true;
+        _zyzs.parentNode.insertBefore(_s, _zyzs);*/
+    </script>
+<script async src="//ms2-m.vipstatic.com/js/lib/cf80229a1d.tkmvip.min.js"></script>
+<noscript>
+     <p><img src="http://tk.optaim.com/p?sid=zyz_364_1" width="0" height="0" border="0" alt="" /></p>
+</noscript>
+<!-- ZYZ Code End -->
+</body>
+</html>

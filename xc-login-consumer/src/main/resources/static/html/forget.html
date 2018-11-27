@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html data-php=''>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="baidu-site-verification" content="t7oDT96Amk" />
+    <title>忘记密码</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="sogou_site_verification" content="G7nmLR75yc"/>
+    <meta name="baidu-tc-cerfication" content="0a8c6d28b570b218f78510c29be4529b" />
+    <meta name="360-site-verification" content="8b6121969d78afda8caeb69053fa29d9" />
+    <link rel="stylesheet" href="../css/45cd6da9da.layout.min.css">
+    <link rel="stylesheet" href="../css/86fe49ca90.common.min.css">
+    <script src="../js/jquery-1.8.3.js"></script>
+    <script>
+
+
+        var countdown=60;
+        function sendemail(){
+            var obj = $("#btn3");
+            settime(obj);
+
+        }
+        function settime(obj) { //发送验证码倒计时
+            if (countdown == 0) {
+                obj.attr('disabled',false);
+                obj.val("免费获取验证码");
+                countdown = 60;
+                return;
+            } else {
+                obj.attr('disabled',true);
+                obj.val("重新发送(" + countdown + ")");
+                countdown--;
+            }
+            setTimeout(function() {
+                    settime(obj) }
+                ,1000)
+        }
+
+
+
+        $(function () {
+            //异步判定手机号和密码是否正确
+            $("[name=userphone]").blur(function () {
+                $.getJSON(
+                    "/verifyPh",
+                    "userphone=" + $("[name=userphone]").val(),
+                    function (result) {
+                        //注意这个以前没用过，挺好用。
+                        console.log(result);
+                        $("#vp").html(result).css({"color": "red"});
+                    })
+            })
+
+
+
+
+            $("#btn3").click(function () {
+                $.getJSON(
+                    "/smt",
+                    "userphone=" + $("[name=userphone]").val(),
+                    function (result) {
+                        $("#check").html(result).css({"color": "red"});
+                    })
+            })
+
+            //
+            //异步判定短信校验码
+            $("[name=check]").blur(function () {
+                $.getJSON(
+                    "/verifyCkeck",
+                    "check=" + $("[name=check]").val(),
+                    function (result) {
+                        console.log(result);
+                        $("#check").html(result).css({"color": "red"});
+                    })
+            })
+
+
+            //异步判定密码格式是否正确
+            $("[name=userpassword]").blur(function () {
+                $.getJSON(
+                    "/VertifyPassword",
+                    "userpassword=" + $("[name=userpassword]").val(),
+                    function (result) {
+                        $("#vo").html(result).css({"color": "red"});
+                    })
+
+            })
+
+
+            //提交
+            $("#btn").click(function () {
+                $.getJSON(
+                    "/updPa",
+                    "userphone=" + $("[name=userphone]").val()
+                    +"&check="+$("[name=check]").val()
+                    +"&userpassword="+$("[name=userpassword]").val(),
+                    function (result) {
+                        $("#dev").html(result).css({"color": "red"});
+                    })
+            })
+
+
+        })
+    </script>
+
+<style>
+    #btn{background-color: red}
+</style>
+
+
+</head>
+
+<body  >
+
+
+
+
+<!--客户端下载的图片-->
+
+
+<header id="header" class="u-header clearfix">
+    <!--返回按钮根据程序判断来源，返回上一级-->
+    <!-- 非微信扫码进入的用户 -->
+    <div class="u-hd-left f-left">
+        <a href="javascript:void(0)" class="J_backToPrev"><span class="u-icon i-hd-back"></span></a>
+    </div>
+    <div  class="u-hd-tit"><span>重置密码</span></div>
+    <div class="u-hd-right f-right"><a href="/login.html" mars_sead="nav_home_btn"><span class="u-icon i-hd-home"></span></a></div>
+</header>
+
+<div class="container password-box">
+    <div class="row">
+        <div class="panel panel-forms plate-input" data-validform="forgetForm">
+            <div class="panel-heading">
+                <h3 class="panel-title">手机帐号用户</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="nav nav-list form form-horizontal">
+                    <li class="control-group">
+                        <label class="control-label" for="inputMoblie">手机号：</label>
+                        <div class="controls">
+                            <input name="userphone" id="inputMoblie" type="text" maxlength="11"  >
+                        </div>
+                        <span id="vp"></span><br>
+                    </li>
+                    <li class="control-text validform-tips"></li>
+                    <li class="control-group">
+                        <label class="control-label" >验证码：</label>
+                        <div class="controls">
+                            <input name="check"  type="text" maxlength="10" >
+                        </div>
+                        <a href="javascript:;" class="i-delete-text btn-delete"><i class="i-icon-remove"></i></a>
+                    </li>
+                    <li class="control-group">
+                        <div class="controls">
+                            <input type="button" id="btn3" value="免费获取验证码" onclick="sendemail()" />
+                            <span id="check"></span><br>
+                        </div>
+                        <a href="javascript:;" class="i-delete-text btn-delete"><i class="i-icon-remove"></i></a>
+                    </li>
+
+                    <li class="control-group">
+                        <label class="control-label" for="inputMoblie">新密码：</label>
+                        <div class="controls">
+                            <input name="userpassword"  type="password"  placeholder="6-20位，字母和数字结合" >
+                        </div>
+                        <span id="vo"></span><br>
+                    </li>
+
+
+                    <li class="control-text validform-tips"></li>
+                </ul>
+                <div class="plate-controls">
+                    <button type="button" id="btn" class="btn btn-long" >提交</button>
+                </div>
+                <span id="dev"></span>
+            </div>
+            <!--<div class="panel-heading">-->
+                <!--<h3 class="panel-title">邮箱帐号用户</h3>-->
+            <!--</div>-->
+            <!--<div class="panel-body">-->
+                <!--<p class="email-user">请使用电脑登录唯品会找回密码</p>-->
+            <!--</div>-->
+        </div>
+
+        <div class="panel panel-forms plate-input hide" data-validform="passwordForm">
+            <div class="panel-body">
+                <ul class="nav nav-list form form-horizontal">
+                    <li class="control-group">
+                        <label class="control-label" for="inputPassword">新密码：</label>
+                        <div class="controls">
+                            <input name="inputPassword" id="inputPassword" type="password" placeholder="6-20位字母与数字组成" maxlength="20" value="" datatype="sn6-20">
+                        </div>
+                        <a href="javascript:;" class="i-delete-text btn-delete"><i class="i-icon-remove"></i></a>
+                    </li>
+                    <li class="control-text validform-tips"></li>
+                </ul>
+                <div class="plate-controls">
+                    <button type="button" class="btn btn-long disabled" disabled="disabled" data-action="passwordSet">完 成</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="u-footer clearfix">
+    <!--<div class="u-ft-downbtn"><a style="display: block; width: 320px; height: 53px; margin: 0 auto; background: url(//ms2-m.vipstatic.com/images/common/dc4267fbe5.btn_down_footer.png) no-repeat; background-size: 320px;" href="http://m.vip.com/service-download.html" mars_sead="footer_client_download_btn">-->
+      <!--<span style="display: block;width: 116px;height:36px;padding: 10px 0 0 90px;overflow: hidden;line-height: 18px;font-style: italic;text-shadow: 0 1px 1px rgba(255,255,255,.75);color: #000;">-->
+        <!--下载手机app<br />特卖惊喜抢不停！-->
+      <!--</span>-->
+    <!--</a></div>-->
+    <div class="u-footnav clearfix">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!--<a href="index.html" mars_sead="footer-index_btn">首页</a>-->
+        <!--<a href="cart.html" mars_sead="footer-cart_btn">购物车</a>-->
+        <!--<a href="service-download.html" mars_sead="footer-loading_btn">客户端</a>-->
+        <a href="login.html?back_act=http%3A%2F%2Fm.vip.com%2Fforget.html" mars_sead="footer-mlogin_btn">登录</a>
+        <a href="phone.html?back_act=http%3A%2F%2Fm.vip.com%2Fforget.html" mars_sead="footer-mregister_btn">注册</a>
+
+    </div>
+    <p class="u-copyright" >Copyright © 2008-2015 m.vip.com，All Rights Reserved 粤ICP备08114786号</p>
+</div>
+<a href="#top" class="u-backtop" mars_sead="home_foot_top_btn"><span class="u-icon i-backtop"></span></a>
+<!--以下是浮于显示屏左下角的购物袋-->
+
+
+
+
+
+
+
+
+<noscript>
+    <img src="http://mar.vip.com/n" height="1" width="1" border="0" alt="" />
+</noscript>
+
+
+
+
+<!-- ZYZ Code Start -->
+<script type="text/javascript">
+    var _zyzs = document.getElementsByTagName('script')[0];
+    var _zaq  = _zaq || [];
+    _zaq.push(['setTrackerUrl', 'http://tk.optaim.com/j']);
+    _zaq.push(['setSiteId', 'zyz_283_1']);
+    _zaq.push(['trackPageView']);
+
+    /*var _s   = document.createElement('script');
+    _s.src   = "http://s2.vipstatic.com/js/public/inf/ztk.js";
+    _s.type  = 'text/javascript';
+    _s.async = true;
+    _zyzs.parentNode.insertBefore(_s, _zyzs);*/
+</script>
+
+<noscript>
+    <p><img src="http://tk.optaim.com/p?sid=zyz_364_1" width="0" height="0" border="0" alt="" /></p>
+</noscript>
+<!-- ZYZ Code End -->
+</body>
+</html>

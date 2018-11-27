@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>WelcomeLogin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="此代码内容为超萌的猫头鹰登录界面" />
+    <script src="../js/jquery-1.8.3.js"></script>
+
+</head>
+<!--异步刷新写了好几次没写对，原因在于：-->
+<!--1.配好js(看上面）-->
+<!--2.在springcoloud中html页面写在resource/static/html下面。-->
+<!--3.在写之前写写alert弹框，function能不能成功。不要写了半天错误。
+4.访问的时候直接访问html页面，如：http://localhost:7001/html/phone.html-->
+<script type="text/javascript">
+
+    var countdown=60;
+    function sendemail(){
+        var obj = $("#btn3");
+        settime(obj);
+
+    }
+    function settime(obj) { //发送验证码倒计时
+        if (countdown == 0) {
+            obj.attr('disabled',false);
+            obj.val("免费获取验证码");
+            countdown = 60;
+            return;
+        } else {
+            obj.attr('disabled',true);
+            obj.val("重新发送(" + countdown + ")");
+            countdown--;
+        }
+        setTimeout(function() {
+                settime(obj) }
+            ,1000)
+    }
+
+
+    $(function () {
+
+        //异步判定用户名是否正确
+        $("[name=username]").blur(function () {
+            $.getJSON(
+                "/vertifyname",
+                "username=" + $("[name=username]").val(),
+                function (result) {
+                    $("#vp1").html(result).css({"color": "red"});
+                })
+        })
+
+
+        //异步判定手机号是否正确
+        $("[name=userphone]").blur(function () {
+            $.getJSON(
+                "/vertifyPhone",
+                "userphone=" + $("[name=userphone]").val(),
+                function (result) {
+                    $("#vp").html(result).css({"color": "red"});
+                })
+        })
+
+        //点击获取 验证码
+        $("#btn3").click(function () {
+            $.getJSON(
+                "/sms",
+                "userphone=" + $("[name=userphone]").val(),
+                function (result) {
+                    $("#sub2").html(result).css({"color": "red"});
+                })
+        })
+
+        //异步判定密码格式是否正确
+        $("[name=userpassword]").blur(function () {
+            $.getJSON(
+                "/VertifyPassword",
+                "userpassword=" + $("[name=userpassword]").val(),
+                function (result) {
+                    $("#vo").html(result).css({"color": "red"});
+                })
+
+        })
+
+
+
+        //异步提交
+        // 虽然前端页面报错，但是没问题可以传
+        $("#btn2").click(function () {
+            $.getJSON(
+                "/reg",
+                "username=" + $("[name=username]").val()+
+                "&userphone=" + $("[name=userphone]").val()
+                +"&userpassword=" + $("[name=userpassword]").val()
+                +"&checkcode="+$("[name=checkcode]").val(),
+                function (result) {
+                    $("#sub").html(result).css({"color": "red"});
+                })
+
+        })
+
+    })
+
+</script>
+
+<body>
+    用户名<input type="text" name="username" placeHolder="不能是纯数字"/><p id="vp1"></p><br/>
+    手机号<input type="text" name="userphone" placeHolder="手机号,11位数字"/><p id="vp"></p><br/>
+    校验码<input type="text" name="checkcode" placeHolder="校验码"/>
+    <input type="button" id="btn3" value="免费获取验证码" onclick="sendemail()" />
+    <p id="sub2"></p>
+    密码  <input type="password" name="userpassword" placeholder="6-20位，字母和数字结合"/>
+    <p id="vo"></p>
+    <button id="btn2">注册</button></button><p id="sub"></p>
+</body>
+</html>

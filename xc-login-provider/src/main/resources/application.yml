@@ -1,0 +1,162 @@
+server:
+  port: 7001
+
+#公共配置与profiles选择无关 mapperLocations指的路径是src/main/resources
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+---
+
+#开发配置
+spring:
+  profiles:
+    active: dev
+  datasource:
+  # 使用druid数据源
+    url: jdbc:mysql://localhost:3306/citygoods
+    username: root
+    #这里放的是生成加密后的password
+#    password: rootroot
+    password: SqtXpIDyM6don+E8/Jfm7xOiIxtOl4Uo1fCiDd6UQJFsxGhbCRnAePgrOUWagK1PYTYwGfQm5QbNjytBbUGhjw==
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+    #用于采集web-jdbc关联监控的数据
+     web-stat-filter:
+       #添加过滤规则
+       url-pattern: '/*'
+       #排除一些不必要的url
+       exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+       enabled: true
+       #配置profileEnable能够监控单个url调用的sql列表
+       profile-enable: true
+       #session统计功能
+       session-stat-enable: true
+       #session-stat-max-count: 2
+     stat-view-servlet:
+       enabled: true
+       url-pattern: /druid/*
+       #是否可以重置统计页面
+       reset-enable: true
+        #druid控制台的账户和密码可以在这里设置
+       login-username: root
+       login-password: root
+#     aop-patterns: com.example.demo.cn.service.*
+      #最大连接池数量
+     max-active: 10
+     #最小连接池数量
+     min-idle: 1
+     #初始线程池大小
+     initial-size: 1
+     #最大等待数量
+     max-wait: 60000
+      #销毁线程
+      #如果检测到当前连接的最后活跃时间和当前时间的差值大于minEvictableIdleTimeMillis，则关闭当前连接。
+     minEvictableIdleTimeMillis: 300000
+     #用来检测连接是否有效的sql，是一个查询语句。
+     #如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会起作用
+     validationQuery: select 'x'
+     #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+     timeBetweenEvictionRunsMillis: 60000
+     #建议配置为true，不影响性能，并且保证安全性。申请连接的时候检测，如果空闲时间大于 timeBetweenEvictionRunsMillis，
+     #执行validationQuery检测连接是否有效。
+     testWhileIdle: true
+     #申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能。
+     testOnBorrow: false
+     #归还连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+     testOnReturn: false
+     #是否缓存preparedStatement，也就是PSCache。
+     poolPreparedStatements: true
+     #要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。
+     #这个代表在缓存中缓存多少条数据
+     maxOpenPreparedStatements: 100
+    tomcat:
+      #对于长时间不使用的连接强制关闭
+      remove-abandoned: true
+      #超过30分钟开始关闭空闲连接
+      remove-abandoned-timeout: 1800
+      #将当前关闭动作记录到日志
+      log-abandoned: true
+
+---
+
+spring:
+  redis:
+      #数据库索引
+    database: 0
+    host: localhost
+    port: 6379
+    jedis:
+      pool:
+          #最大连接数
+        max-active: 8
+          #最大空闲
+        max-idle: 8
+
+          #最小空闲
+        min-idle: 0
+---
+spring:
+  security:
+    basic:
+      enabled: ture
+    user:
+      name: admin
+      password: 123456
+---
+
+# actuator监控
+management:
+  server:
+    # 设置监控服务端口
+    port: 8081
+  health:
+      mail:
+        enabled: false
+  endpoints:
+    # 设置端点是否可用 默认只有shutdown可用
+    enabled-by-default: true
+    web:
+      # 设置是否暴露端点 默认只有health和info可见
+      exposure:
+        # 包括所有端点
+        include: "*" # 注意需要添加引号
+        # 排除端点
+        exclude: shutdown
+---
+
+spring:
+  application:
+    name: xc-login-provider
+eureka:
+  instance:
+    instance-id: xc-login-provider
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://101.132.139.58:6001/eureka/
+---
+spring:
+  zipkin:
+    base-url: http://101.132.139.58:7777
+  sleuth:
+    sampler:
+      percentage: 1.0
+---
+logging:
+  level: info
+spring:
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+
+---
+spring:
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: false
+---
+#注意下面这个路径，一定要写对，不要多斜杠或者少斜杠，都不行，会找不到路径
+#spring:
+#  thymeleaf:
+#    prefix: classpath:/static/html/
+#    suffix: .html

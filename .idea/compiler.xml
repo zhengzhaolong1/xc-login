@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="xc-customer-consumer" />
+        <module name="xc-customer-provider" />
+        <module name="xc-login-consumer" />
+        <module name="xc-login-provider" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xc-customer-consumer" target="1.8" />
+      <module name="xc-customer-provider" target="1.8" />
+      <module name="xc-login-consumer" target="1.8" />
+      <module name="xc-login-provider" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

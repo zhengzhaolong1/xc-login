@@ -1,0 +1,22 @@
+server:
+  port: 7002
+spring:
+  application:
+    name: xc-customer-provider
+eureka:
+  instance:
+    instance-id: xc-customer-provider
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://60.205.207.9:6001/eureka/
+
+---
+spring:
+  zipkin:
+    base-url: http://60.205.207.9:7777
+  sleuth:
+    sampler:
+       percentage: 1.0
+logging:
+    level: info

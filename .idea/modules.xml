@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xc-customer-consumer/xc-customer-consumer.iml" filepath="$PROJECT_DIR$/xc-customer-consumer/xc-customer-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xc-customer-provider/xc-customer-provider.iml" filepath="$PROJECT_DIR$/xc-customer-provider/xc-customer-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/xc-login.iml" filepath="$PROJECT_DIR$/.idea/xc-login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xc-login-consumer/xc-login-consumer.iml" filepath="$PROJECT_DIR$/xc-login-consumer/xc-login-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xc-login-provider/xc-login-provider.iml" filepath="$PROJECT_DIR$/xc-login-provider/xc-login-provider.iml" />
+    </modules>
+  </component>
+</project>

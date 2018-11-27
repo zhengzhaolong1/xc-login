@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>del</title>
+</head>
+<body>
+信息：<h4 th:text="${msg}"></h4>
+
+<form action="/del" >
+    <p>手机号：<input type="text" name="userphone" /></p>
+    <p>密码：<input type="password" name="password" /></p>
+    <p><input type="submit" value="注销"/></p>
+</form>
+<!--<a href="http://localhost:8080/userInfo/userList">用户查询</a><br/>-->
+<!--<a href="http://localhost:8080/userInfo/userAdd">用户添加界面</a><br/>-->
+<!--<a href="http://localhost:8080/userInfo/userDel">用户删除界面</a><br/>-->
+<!--<a href="http://localhost:8080/guest/guest">游客界面</a><br/>-->
+</body>
+</html>

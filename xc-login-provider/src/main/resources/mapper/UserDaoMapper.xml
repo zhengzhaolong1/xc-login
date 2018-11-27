@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.axy.xc.xcloginprovider.cn.dao.UserDao">
+    <select id="findByPhone" resultType="cn.axy.xc.xcloginprovider.cn.pojo.User"
+            parameterType="String">
+        select password,uid from user where userphone = #{userphone}
+    </select>
+    <select id="findByUsername" parameterType="String"
+            resultType="cn.axy.xc.xcloginprovider.cn.pojo.User">
+        select password,uid from user where username = #{username}
+    </select>
+
+    <select id="fingBy" resultType="cn.axy.xc.xcloginprovider.cn.pojo.User">
+        select password,uid from user
+        <trim prefix="where" prefixOverrides="and|or">
+            <if test="user.username != null">
+                and username = #{user.username}
+            </if>
+            <if test="user.userphone != null">
+                and userphone = #{user.userphone}
+            </if>
+
+        </trim>
+    </select>
+</mapper>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>index</title>
+</head>
+<script src="../js/jquery-1.8.3.js"></script>
+<script>
+    $(function () {
+        //异步判定手机号和密码是否正确
+        $("#btn").click(function () {
+            $.getJSON(
+                "/login",
+                "username=" + $("[name=username]").val()+"&password="+$("[name=password]").val(),
+                function (result) {
+                    //注意这个以前没用过，挺好用。
+                    console.log(result);
+                    if (result.code == 200){
+                        alert(result.id);
+                        $("#vp").html(result.code).css({"color": "red"});
+                        $("#e").html(result.id).css({"color": "red"});
+                    }else {
+                        $("#vp").html(result
+                        ).css({"color": "red"})
+                    }
+
+
+                })
+        })
+
+
+
+    })
+</script>
+</head>
+<body>
+
+<p>账号：<input type="text" name="username" /></p>
+<p>密码：<input type="password" name="password" /></p>
+<button id="btn">提交</button>
+退出成功
+<span id="dev"></span>
+</body>
+</html>

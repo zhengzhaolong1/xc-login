@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta name="baidu-site-verification" content="t7oDT96Amk" />
+<title>登录</title>
+<meta content="" name="keywords">
+<meta content="" name="description">
+<meta name="sogou_site_verification" content="G7nmLR75yc"/>
+<meta name="baidu-tc-cerfication" content="0a8c6d28b570b218f78510c29be4529b" />
+<meta name="360-site-verification" content="8b6121969d78afda8caeb69053fa29d9" />
+<!--<script>__STATS.add('head_load');</script>-->
+  <link rel="stylesheet" href="../css/45cd6da9da.layout.min.css">
+  <link rel="stylesheet" href="../css/86fe49ca90.common.min.css">
+  <script src="../js/562a4c0e89.jquery-2.1.0.min.js"></script>
+  <script src="../js/jquery-1.8.3.js"></script>
+
+  <script>
+      $(function () {
+          //异步判定手机号和密码是否正确
+          $("#btn").click(function () {
+              $.getJSON(
+                  "/login",
+                  "username=" + $("[name=username]").val()+"&password="+$("[name=password]").val(),
+                  function (result) {
+                      //注意这个以前没用过，挺好用。
+                      console.log(result);
+                      if (result.code == 200){
+                          alert(result.code);
+                          alert(result.id);
+                          // $("#vp").html(result.code).css({"color": "red"});
+                          // $("#e").html(result.id).css({"color": "red"});
+                      }else {
+                          // $("#vp").html(result).css({"color": "red"})
+                          alert(result);
+                      }
+
+
+                  })
+          })
+
+
+
+      })
+  </script>
+
+  <style type="text/css">
+    #weibo{padding-left: 500px}
+    #ww{font-size: 25px}
+    #xiugai{margin-left: 500px}
+  </style>
+</head>
+
+<body>
+
+
+
+<!--客户端下载的图片-->
+ 
+
+    <header id="header" class="u-header clearfix">
+      <!--返回按钮根据程序判断来源，返回上一级-->
+     
+      <div class="u-hd-left f-left"><a href="javascript:void(0)" class="J_backToPrev"><span class="u-icon i-hd-back"></span></a></div>
+           <span class="u-hd-tit">用户登录</span>
+           <div class="u-hd-right f-right"><a href="index.html" mars_sead="nav_home_btn"><span class="u-icon i-hd-home"></span></a></div>
+       </header>
+  
+<div class="container user-login-box">
+  <div class="row">
+    <div class="panel panel-forms">
+            <!-- 登录 -->
+      <div class="panel-body" data-validform="loginForm">
+        <ul class="nav nav-list form form-horizontal">
+          <li class="control-group">
+            <label class="control-label" for="inputName">账号：</label>
+            <div class="controls">
+              <input name="username" id="inputName" type="text" value="" maxlength="50" placeholder="请输入手机号或者账户名" datatype="m|e|q">
+            </div>
+            <a href="javascript:;" class="i-delete-text btn-delete"><i class="i-icon-remove"></i></a>
+          </li>
+          <li class="control-text validform-tips"></li>
+          <li class="control-group">
+            <label class="control-label" for="inputPsw">密码：</label>
+            <div class="controls">
+              <input name="password" id="inputPsw" type="password" placeholder="6-20位字母或数字组成" maxlength="30" value="" datatype="*sn6-20">
+            </div>
+            <a href="javascript:;" class="i-delete-text btn-delete"><i class="i-icon-remove"></i></a>
+          </li>
+          <li class="control-text validform-tips"></li>
+          <!--<li class="control-group control-captcha hide" id="li_captcha">-->
+            <!--<span><input type="text" name="captcha" size="5" maxlength="4" datatype="*" placeholder="请输入验证码" value=""></span>-->
+            <!---->
+            <!--<img src="captcha.html?1875114288&type=0" id="captcha" alt="captcha" style="width:65px;vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.html?type=0&'+Math.random()" />-->
+            <!--<a href="javascript:void(0)" onclick="document.getElementById('captcha').src='captcha.html?type=0&'+Math.random()">&nbsp;看不清？换一张</a>-->
+          <!--</li>-->
+          <li class="control-text validform-tips hide"></li>
+        </ul>
+        <div class="btn-controls">
+          <button type="button"  id="btn" class=" btn-long btn-purple" data-action="loginCheck">登 录</button>
+        </div><br/><p id="vp"></p><p id="e"></p>
+        <div class="link-controls">
+          <!--<div class="cb-controls">-->
+            <!--<label class="checkbox inline">-->
+              <!--<input name="inputRemember" type="checkbox" checked="checked" value="1" />两周内免登录-->
+            <!--</label>-->
+          <!--</div>-->
+          <div class="container">
+            <a href="phone.html" class="">立即注册>></a>
+            <a href="/updpwd.html" id="xiugai">修改密码>></a>
+            <a href="forget.html" class="fr">忘记密码?</a>
+          </div>
+                  </div>
+        <input type="hidden" name="back_act" value="http://m.vip.com/cart.html" />
+      </div>
+            <!--注册-->
+
+      <div id="weibo" >
+        <a href="/weiboOAuth4Code" ><span id="ww">微博登录</span></a>
+        <a href="/weiboOAuth4Code" ><img src="../images/LOGO_32x32.png" height="64" width="64"/></a>
+      </div>
+
+
+
+
+
+          </div>
+    <ul class="introduce clearfix">
+      <li><span class="promise_zp"></span>
+        <p>100%正品保证</p>
+      </li>
+      <li><span class="seven_return"></span>
+        <p>七天无理由退货</p>
+      </li>
+      <li><span class="quily_fh"></span>
+        <p>退货免运费</p>
+      </li>
+      <!--<li><span class="golden_sevices"></span><p>金牌客服</p></li>-->
+    </ul>
+  </div>
+</div>
+<!--以下是底部样式-->
+  <div class="u-footer clearfix">
+        <!--<div class="u-ft-downbtn"><a style="display: block; width: 320px; height: 53px; margin: 0 auto; background: url(//ms2-m.vipstatic.com/images/common/dc4267fbe5.btn_down_footer.png) no-repeat; background-size: 320px;" href="http://m.vip.com/service-download.html" mars_sead="login_footer_client_download_btn">
+      <span style="display: block;width: 116px;height:36px;padding: 10px 0 0 90px;overflow: hidden;line-height: 18px;font-style: italic;text-shadow: 0 1px 1px rgba(255,255,255,.75);color: #000;">
+        下载手机APP<br/>登录购物无忧愁 !
+      </span>
+    </a></div>-->
+        <div class="u-footnav clearfix">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+          <!--<a href="index.html" mars_sead="footer-index_btn">首页</a>-->
+          <!--<a href="cart.html" mars_sead="footer-cart_btn">购物车</a>-->
+          <!--<a href="service-download.html" mars_sead="footer-loading_btn">客户端</a>-->
+          <a href="login.html" mars_sead="footer-mlogin_btn">登录</a>
+          <a href="phone.html" mars_sead="footer-mregister_btn">注册</a>
+
+    </div>
+    <p class="u-copyright" style="display:none";>Copyright © 2008-2015 m.vip.com，All Rights Reserved 粤ICP备08114786号</p>
+  </div>
+    <!--以下是浮于显示屏左下角的购物袋-->
+<noscript>
+    <img src="http://mar.vip.com/n" height="1" width="1" border="0" alt="" />
+</noscript>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <script src="../js/jquery-1.8.3.js"></script>
+    <script>
+
+
+        var countdown=60;
+        function sendemail(){
+            var obj = $("#btn3");
+            settime(obj);
+
+        }
+        function settime(obj) { //发送验证码倒计时
+            if (countdown == 0) {
+                obj.attr('disabled',false);
+                obj.val("免费获取验证码");
+                countdown = 60;
+                return;
+            } else {
+                obj.attr('disabled',true);
+                obj.val("重新发送(" + countdown + ")");
+                countdown--;
+            }
+            setTimeout(function() {
+                    settime(obj) }
+                ,1000)
+        }
+
+
+
+        $(function () {
+            //异步判定手机号和密码是否正确
+            $("[name=userphone]").blur(function () {
+                $.getJSON(
+                    "/verifyPh",
+                    "userphone=" + $("[name=userphone]").val(),
+                    function (result) {
+                        //注意这个以前没用过，挺好用。
+                        console.log(result);
+                        $("#vp").html(result).css({"color": "red"});
+                    })
+            })
+
+            //
+            //异步判定短信校验码
+            $("[name=check]").blur(function () {
+                $.getJSON(
+                    "/verifyCkeck",
+                    "check=" + $("[name=check]").val(),
+                    function (result) {
+                        console.log(result);
+                        $("#check").html(result).css({"color": "red"});
+                    })
+            })
+
+
+            //异步判定密码格式是否正确
+            $("[name=userpassword]").blur(function () {
+                $.getJSON(
+                    "/VertifyPassword",
+                    "userpassword=" + $("[name=userpassword]").val(),
+                    function (result) {
+                        $("#vo").html(result).css({"color": "red"});
+                    })
+
+            })
+
+
+            //提交
+            $("#btn").click(function () {
+                $.getJSON(
+                    "/updPa",
+                    "userphone=" + $("[name=userphone]").val()
+                    +"&check="+$("[name=check]").val()
+                    +"&userpassword="+$("[name=userpassword]").val(),
+                    function (result) {
+                            $("#dev").html(result).css({"color": "red"});
+                    })
+            })
+
+
+        })
+    </script>
+</head>
+<body>
+<!--信息：<h4 th:text="${msg}"></h4>-->
+
+<p>手机号：<input type="text" name="userphone" /></p><span id="vp"></span><br>
+
+校验码<input type="text" name="check" placeHolder="校验码"/>
+<input type="button" id="btn3" value="免费获取验证码" onclick="sendemail()" /><span id="check"></span><br>
+
+<p>新密码：<input type="password" name="userpassword" placeholder="6-20位，字母和数字结合"/></p><span id="vo"></span><br>
+<button id="btn">提交</button>
+
+<span id="dev"></span>
+</body>
+</html>
